@@ -1,0 +1,1026 @@
+msgid ""
+msgstr "MIME-Version: 1.0\n"
+
+#. Name.
+msgid "Autoptimize"
+msgstr ""
+
+#. Short description.
+msgid "Autoptimize speeds up your website and helps you save bandwidth by aggregating and minimizing JS, CSS and HTML."
+msgstr ""
+
+#. Found in description paragraph.
+msgid "Autoptimize makes optimizing your site really easy. It concatenates all scripts and styles, minifies and compresses them, adds expires headers, caches them, and moves styles to the page head, and scripts to the footer. It also minifies the HTML code itself, making your page really lightweight. There are advanced options available to enable you to tailor Autoptimize to each and every site's specific need."
+msgstr ""
+
+#. Found in installation list item.
+msgid "Upload the zip file and unzip it in the <code>/wp-content/plugins/</code> directory"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Activate the plugin through the 'Plugins' menu in WordPress"
+msgstr ""
+
+#. Found in installation list item.
+msgid "Go to <code>Settings &gt; Autoptimize</code> and enable the options you want. Generally this means \"Optimize HTML/ CSS/ JavaScript\"."
+msgstr ""
+
+#. Found in installation paragraph.
+msgid "Just install from your WordPress \"Plugins &gt; Add New\" screen and all will be well. Manual installation is very straightforward as well:"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "bugfix: make sure non-AO CSSmin doesn't get fed 2 parameters (as some only expect one, which resulted in an internal server error), based on <a href=\"https://wordpress.org/support/topic/error-code-500internal-server-error?replies=7\">feedback from zerooverture and zamba</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "bugfix: make default add_action hook back into \"template_redirect\" instead of \"init\" to fix multiple problems as reported by <a href=\"https://wordpress.org/support/topic/192-concatenated-js-but-193-does-not-for-me?replies=11\">schecteracademicservices, bond138, rickenbacker</a>, <a href=\"https://wordpress.org/support/topic/version-193-made-plugin-wp-cdn-rewrite-crash?replies=3#post-6833159\">Rick Sportel</a> and <a href=\"https://wordpress.org/support/topic/the-page-loads-both-the-auto-combined-css-file-and-origin-raw-file?replies=11#post-6833146\">wizray</a>. If you do need Autoptimize to initialize earlier (e.g. when using Nextgen Galleries), then add this to your wp-config.php:"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "improvement: more intelligent CDN-replacement logic, thanks <a href=\"https://wordpress.org/support/topic/enable-cdn-for-images-referenced-in-the-css?replies=9\">Squazz for reporting and testing</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "improvement: allow strings (comments) to be excluded from HTML-optimization (comment removal)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "improvement: changed priority with which AO gets triggered by WordPress, solving JS not being aggregated when NextGen Galleries is active, with great <a href=\"https://wordpress.org/support/topic/js-options-dont-work-if-html-disabled/\">help from msebald</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "improvement: extra JS exclude-strings: gist.github.com, text/html, text/template, wp-slimstat.min.js, _stq, nonce, post_id (the latter two were removed from the \"manual\" exclude list on the settings-page)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "new in API: autoptimize_filter_html_exclude, autoptimize_filter_css_defer, autoptimize_filter_css_inline, autoptimize_filter_base_replace_cdn, autoptimize_filter_js_noptimize, autoptimize_filter_css_noptimize, autoptimize_filter_html_noptimize"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "bugfix: remove some PHP notices, as <a href=\"https://wordpress.org/support/topic/php-errors-39\">reported by dimitrov.adrian</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "bugfix: make sure HTML-optimalization does not gobble a space before a cite <a href=\"https://wordpress.org/support/topic/%E2%80%9Coptimize-html%E2%80%9D-is-gobbling-whitespace-before-cite-tag\">as proposed by ecdltf</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "bugfix: cleaning the cache did not work on non-default directories as <a href=\"https://wordpress.org/support/topic/changing-the-wp-content-path-to-top-level?replies=10#post-6573657\">encountered by NoahJ Champion</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "upgraded to <a href=\"https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port\">yui compressor php port 2.4.8-4</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "added arabic translation, thanks to the <a href=\"http://www.ekleel.net\">ekleel team</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "tested with WordPress 4.2 beta 3"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: support for alternative cache-directory and file-prefix as requested by a.o. <a href=\"https://wordpress.org/support/topic/requesthelp-add-ability-to-specify-cache-folder?replies=1#post-6300128\">Jassi Bacha</a>, <a href=\"https://wordpress.org/support/topic/rewrite-js-path?replies=6#post-6363535\">Cluster666</a> and Baris Unver."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improvement: hard-exclude all linked-data json objects (script type=application/ld+json)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improvement: several filters added to the API, e.g. to alter optimized HTML, CSS or JS"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bugfix: set Autoptimize priority back from 11 to 2 (as previously) to avoid some pages not being optimized (thanks to <a href=\"https://wordpress.org/support/topic/wp-property-plugin-add_action-priority-incompatibility?replies=1\">CaveatLector for investigating &amp; reporting</a>)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bugfix (in YUI-CSS-compressor-PHP-port): don't convert bools to percentages in rotate3D-transforms (cfr. <a href=\"https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port/issues/17\">bugreport on Github</a>)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bugfix: background images with a space in the path didn't load, <a href=\"https://wordpress.org/support/topic/optimize-css-code-error-with-background-image-elements?replies=6#post-6201582\">reported by johnh10</a>."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bugfix: SVG image with fill:url broken after CSS optimization as <a href=\"https://wordpress.org/support/topic/one-more-broblem-with-plugin?replies=2\">reported by Tkama</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated translation for Swedish, new translation for Ukrainian by <a href=\"http://SebWeo.com\">Zanatoly of SebWeo.com</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated readme.txt"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Confirmed working with WordPress 4.1"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "hard-exclude <a href=\"http://wordpress.org/plugins/wordpress-seo/changelog/\">the sidelink-search-box introduced in WP SEO v1.6</a> from JS optimization (this <a href=\"http://wordpress.org/support/topic/190-breaks-js?replies=4\">broke some JS-optimization badly</a>)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "bugfix: first add semi-colon to inline script, only then add try-catch if required instead of the other way around."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "\"Inline and defer CSS\" allows one to specify which \"above the fold CSS\" should be inlined, while the normal optimized CSS is deferred."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Inlined Base64-encoded background Images will now be cached as well and the threshold for inlining these images has been bumped up to 4096 bytes (from 2560)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Separate cache-directories for CSS and JS in /wp-content/cache/autoptimize, which should result in faster cache pruning (and in some cases possibly faster serving of individual aggregated files)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "CSS is now added before the -tag, JS before  (and after  when forced in head). This can be overridden in the API."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Some usability improvements of the administration-page"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Multiple hooks added to the API a.o. filters to not aggregate inline CSS or JS and filters to aggregate but not minify CSS or JS."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated translations for Dutch, French, German, Persian and Polish and new translations for Brazilian Portuguese (thanks to <a href=\"http://tobeguarany.com/\">Leonardo Antonioli</a>) and Turkish (kudo's <a href=\"http://beyn.org/\">Baris Unver</a>)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Multiple bugfixes &amp; improvements"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tested with WordPress 4.0 rc3"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated to lastest version of <a href=\"https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port/\">CSS minification component</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improvement: for multi-sites the cache is now written to seperate directories, avoiding one site to clean out the cache for the entire installation. Code <a href=\"http://wordpress.org/support/topic/multisite-blog-admin-can-delete-entire-network-cache\">contributed by Joern Lund</a>, kudo's Joern!!"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improvement: add WordPress plugin header to autoptimize_helper.php_example to make it easier to enable it as a module"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improvement: nonce and post_id are added to default configuration for JS exclusion"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improvement: explicitely exclude wp-admin from being Autoptimized"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bugfix: plupload.min.js, syntaxhighlighter and \"adsbygoogle\" are excluded from JS aggregation."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bugfix: avoid double closing body-tags when Autoptimize adds JS to HTML as <a href=\"http://wordpress.org/support/topic/works-like-a-charm-but-i-have-two-problems\">reported by Can</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bugfix: make .htaccess compatible with both Apache 2.2 and 2.4 (http://wordpress.org/support/topic/feature-request-support-generating-htaccess-files-for-apache-24?replies=3)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bugfix: code in inline JS (or CSS) can be wrapped inside HTML-comments, but these got removed since 1.8.2 as part of a bugfix."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bugfix: avoid useless warnings on is_callable to flood php error log as <a href=\"http://wordpress.org/support/topic/182-breaks-css-and-js?replies=14#post-5377604\">reported by Praveen Kumar</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improvement: more graceful failure when minifier classes exist but method does not, based on <a href=\"http://wordpress.org/support/topic/confict-with-dynamic-to-top\">bug-report by Franck160</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improvement: deferred CSS is also outputted in noscript-tags"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improvement: differentiate between Apache version in .htaccess file as suggested by <a href=\"http://www.imadalin.ro/\">iMadalin</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improvement: also aggregate protocol-less CSS/JS URI's (as <a href=\"http://wordpress.org/support/topic/protocol-less-url-support\">suggested by Ross</a>)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improvement: disable autoptimization based on parameter in querystring (for debugging)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bugfix: some CSS-imports were not being aggregated/ minified"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bugfix: add CSS before  to avoid breakage when title includes other attributes (e.g. itemscope)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bugfix: make sure javascript or css between comments is not aggregated as reported by <a href=\"http://wordpress.org/support/topic/the-optimized-css-contains-duplicate-classes\">Milap Gajjar</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Tested with WordPress 3.9 (beta 1)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updates in FAQ"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "bugfix: CSS in conditional comments was not excluded from aggregation as reported by <a href=\"http://www.finkbeiner-holz.de/\">Rolf</a> and <a href=\"http://www.wordpress-hebergement.fr/\">bottapress</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: Option to inline all CSS <a href=\"http://wordpress.org/support/topic/make-style-sheet-inline\">as suggested by Hamed</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: set of filters to provide a simple API to change Autoptimize behavior (e.g. replace \"defer\" with \"async\", disabling Autoptimization on certain pages, specificy non-aggregatable script to be moved after aggregated one (cfr. http://wordpress.org/support/topic/feature-request-some-extra-options?replies=14), size of image to be data-urized). More info in the included autoptimize_helper.php_example."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improvement: exclude (css in) noscript-tags as <a href=\"http://wordpress.org/support/topic/feature-suggestion-noscript-for-css\">proposed by belg4mit</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improvement: switch default delivery of optimized CSS/JS-files from PHP to static files"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated <a href=\"https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port/commit/fb33d2ffd0963692747101330b175a80173ce21b\">upstream CSS minifier</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improvement (force gzip of static files) and Bugfix (force expiry for dynamic files, thanks to <a href=\"http://www.column-razenberg.nl/\">Willem Razenberg</a> in .htaccess"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improvement: fail gracefully when things go wrong (e.g. CSS import resulting in empty aggregated CSS-files <a href=\"http://wordpress.org/support/topic/very-good-332\">reported by Danka</a> or when the theme is broken <a href=\"http://wordpress.org/support/topic/js-optimization-break-site-white-page-issue?replies=14#post-5038941\">as seen by Prateek Gupta</a>)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated translations and Polish added (thanks to <a href=\"http://www.sierpinski.pl/\">Jakub Sierpinski</a>)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bugfix: stop import-statements in CSS comments to be taken into acccount <a href=\"http://www.blog-it-solutions.de/\">hat tip to Josef from blog-it-solutions.de</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Bugfix: fix for blur in CSS breakeage as <a href=\"http://blog.clickpanic.com/\">reported by Chris of clickpanic.com</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "improvement: remove cache + options on uninstall as <a href=\"http://wordpress.org/support/topic/wp_options-entries\">requested by Gingerbreadmen</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "improvement: set .htaccess to allow PHP execution in wp-content/cache/autoptimize when saving optimized files as PHP, as suggested by (David Mottershead of bermuda4u.com)[http://www.bermuda4u.com/] but forbid PHP execution when saving aggregated script/css as static files (except for multisite)."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "bugfix: avoid Yoast SEO sitemaps going blank (due optimization of Yoast's dynamically built XML/XSL) as reported by <a href=\"http://www.icefishing.co\">Vance Hallman</a> and <a href=\"http://solar-flag-pole-lights.com/\">Armand Hadife</a>. More info on this issue <a href=\"http://blog.futtta.be/2013/12/09/blank-yoast-seo-sitemaps-no-more/\">can be found on my blog</a>."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "smaller changes to readme.txt"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "improvement: extra checks in CSS @import-handling + move import rules to top of CSS if not imported successfully, based a.o. on bug reports <a href=\"http://wordpress.org/support/topic/zero-lenght-file-with-css-optimization\">by ozum</a> and by <a href=\"http://wordpress.org/support/topic/cant-activate-plugin-22?replies=13#post-4891377\">Peter Stolwijk</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "improvement: check if JS and CSS minifier classes exist and only load if they don't to avoid possible conflicts with other themes or plugins that already loaded minifiers"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "tested and approved for WordPress 3.8 (beta1)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: support for mapped domains as suggested by <a href=\"http://tiremoni.com/\">Michael for tiremoni.com</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added an .htaccess to wp-content/cache/autoptimize to overwrite other caching directives (fixing a problem with WP Super Cache's .htaccess really, <a href=\"http://wordpress.org/support/topic/expiresmax-age-compatibility-with-supercache\">as reported</a> by <a href=\"http://www.unitedworldschools.org/\">Hugh of www.unitedworldschools.org</a>)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "bugfix: Autoptimize broke data:uri's in CSS in some cases as reported by <a href=\"http://www.blog-it-solutions.de/\">Josef from blog-it-solutions.de</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "bugfix: avoid PHP notice if CSS exclusion list is empty"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "moved \"do not donate\"-image into plugin"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: exclude CSS"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: defer CSS"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated minimizing components (JSMin &amp; YUI PHP CSSMin)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated admin-page, hiding advanced configuration options"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated CDN-support for added simplicity (code &amp; UI-wise), including changing background image url in CSS"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Updated/ new translations provided for <a href=\"http://www.wordpress-hebergement.fr/\">French: wordpress-hebergement.fr</a>, <a href=\"http://basics.ir/\">Persian: Hamed Irani</a>, <a href=\"http://sulo.se/\">Swedish: Jonathan Sulo</a>, <a href=\"http://www.blog-it-solutions.de/\">German: blog-it-solutions.de</a> and Dutch"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Removed support for YUI"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Flush HTML caching plugin's cache when flushing Autoptimize's one"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fix for BOM marker in CSS-files <a href=\"http://wordpress.org/support/topic/sidebar-problem-42\">as seen in Frontier theme</a>, kudo's to <a href=\"http://convertertoolz.com/\">Download Converter</a> for reporting!"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fix for <a href=\"http://wordpress.org/support/topic/javascript-optimize-breaks-twentythirteen-mobile-menu\">protocol-less 3rd party scripts disappearing</a>, thanks for reporting p33t3r!"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fix for stylesheets without type=\"text/css\" not being autoptimized as reported by <a href=\"http://cocobeanproductions.com/\">renzo</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "tested with WordPress 3.7 beta2 (admin-bar.min.js added to automatically excluded scripts)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "New: disable autoptimizatoin by putting part of your HTML, JS or CSS in between noptimize-tags, e.g.;"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added extra check to prevent plugin-files being called outside of WordPress as suggested in <a href=\"http://mikejolley.com/2013/08/keeping-your-shit-secure-whilst-developing-for-wordpress/\">this good article on security</a>."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added small notice to be displayed after installation/ activation to ask user to configure the plugin as well."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added Persian translation, thanks to <a href=\"http://basics.ir/\">Hamed T.</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "new javascript-debug option to force the aggregated javascript file in the head-section of the HTML instead of at the bottom"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "YUI compression &amp; CDN are now deprecated functionality that will be removed in 1.7.0"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fix for PHP notice about mfunc_functions"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fix for strpos warnings due to empty values from the \"Exclude scripts from autoptimize\" configuration as <a href=\"http://wordpress.org/support/topic/empty-needle-warning\">reported by CandleFOREX</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fix for broken feeds as <a href=\"http://wordpress.org/support/topic/feed-issue-5\">reported by Dinata and talgalili</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fix for IE-hacks with javascript inside, causing javascript breakage (as seen in Sampression theme) as reported by <a href=\"http://www.hiskip.com/wp/\">Takahiro of hiskip.com</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fix for escaping problem of imported css causing css breakage (as seen in Sampression theme) as reported by Takahiro as well"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fix to parse imports with syntax @import 'custom.css' not being parsed (as seen in Arras theme), again as reported by Takahiro"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fix for complex media types in media-attribute <a href=\"http://wordpress.org/support/topic/autoptimize-and-media-queries\">as reported by jvwisssen</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fix for disappearing background-images that were already datauri's <a href=\"http://wordpress.org/support/topic/data-uris\">as reported by will.blaschko</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fix not to strip out comments in HTML needed by WP Super Cache or W3 Total Cache (e.g. mfunc)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "added check to clean cache on upgrade"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "updated FAQ in readme with information on troubleshooting and support"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "tested with WordPress 3.6 beta"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Yet another emergency bugfix I'm afraid: apache_request_headers (again in config/delayed.php) is only available on ... Apache (duh), breaking non-Apache systems such as ngnix, Lighttpd and MS IIS badly. Reported by multiple users, thanks all!"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "fixed stupid typo in config/delayed.php which broke things badly (april fools-wise); strpos instead of str_pos as reported by Takahiro."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "You can now specify scripts that should not be Autoptimized in the admin page. Just add the names (or part of the path) of the scripts in a comma-seperated list and that JavaScript-file will remain untouched by Autoptimize."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Added support for ETag and LastModified (essentially for a better pagespeed score, as the files are explicitely cacheable for 1 year)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Autoptimizing for logged in users is enabled again"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Autoptimize now creates an index.html in wp-content/cache/autoptimize to prevent snooping (as <a href=\"http://blog.futtta.be/2013/01/07/adopting-an-oss-orphan-autoptimize/#li-comment-36292\">proposed by Chris</a>)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "bugfix: removed all deprecated functions (<a href=\"http://wordpress.org/support/topic/many-deprecated-errors\">reported by Hypolythe</a> and diff by Heiko Adams, thanks guys!)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "bugfix for HTTPS-problem as <a href=\"http://wordpress.org/support/topic/woocommerce-autoptimizer-https-issue\">reported by dbs121</a>"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "bugfix for breakage with unusual WordPress directory layout as reported by <a href=\"http://www.blog-it-solutions.de/\">Josef from blog-it-solutions.de</a>."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "bugfix: add CSS before opening title-tag instead of after closing title, to avoid CSS being loaded in wrong order, as reported by <a href=\"http://fotoandfashion.de/\">fotofashion</a> and <a href=\"http://www.blog-it-solutions.de\">blogitsolutions</a> (thanks guys)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "first bugfix release by <a href=\"http://blog.futtta.be/2013/01/07/adopting-an-oss-orphan-autoptimize/\">futtta</a>, thanks for a great plugin Turl!"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "misc bug fixes, a.o. support for Twenty Twelve theme, admin bar problem in WP3.5, data-uri breaking CSS file naming"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add support for inline style tags with CSS media"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix Wordpress top bar"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add workaround for TinyMCEComments"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add workaround for asynchronous Google Analytics"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add workaround for Chitika ads."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add workaround for LinkWithin widget."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Belorussian translation"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add workarounds for amazon and fastclick"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add workaround for Comment Form Quicktags"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix issue with Vipers Video Quicktags"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix a bug in where some scripts that shouldn't be moved were moved"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix a bug in where the config page wouldn't appear"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix @import handling"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Implement an option to disable js/css gzipping"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Implement CDN functionality"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Implement data: URI generation for images"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Support YUI CSS/JS Compressor"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Performance increases"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Handle WP Super Cache's cache files better"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update translations"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add workaround for whos.among.us"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Support preserving HTML Comments. "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Implement \"delayed cache compression\""
+msgstr ""
+
+#. Found in changelog list item.
+msgid "French translation"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update Spanish translation"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add workaround for networkedblogs."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add workarounds for histats and statscounter"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add workaround for smowtion and infolinks. "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add workaround for Featured Content Gallery"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Simplified Chinese translation"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update Spanish Translation"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Modify the cache system so it uses wp-content/cache/"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add a clear cache button"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add workaround for Vipers Video Quicktags"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Support  tags without media."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Take even more precautions so we don't break urls in CSS"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Support adding try-catch wrappings to JavaScript code"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add workaround for Wordpress.com Stats"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix a bug in where the tags wouldn't move"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Update translation template"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add fix for DISQUS Comment System."
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add workaround for mybloglog, blogcatalog, tweetmeme and Google CSE "
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Support localization"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix the move and don't move system (again)"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Improve url detection in CSS"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Support looking for scripts and styles on just the header"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix an issue with data: uris getting modified"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Spanish translation"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Write plugin description in English"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Set default config to everything off"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Add link from plugins page to options page"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix problems with scripts that shouldn't be moved and were moved all the same"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Disable CSS media on @imports - caused an infinite loop"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Support CSS media"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix an issue in the IE Hacks preservation mechanism"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "Fix an issue with some urls getting broken in CSS"
+msgstr ""
+
+#. Found in changelog list item.
+msgid "First released version."
+msgstr ""
+
+#. Found in changelog paragraph.
+msgid "First of all; Happy holidays, all the best for 2015!!"
+msgstr ""
+
+#. Found in faq header.
+msgid "What does the plugin do to help speed up my site?"
+msgstr ""
+
+#. Found in faq header.
+msgid "Will this work with my blog?"
+msgstr ""
+
+#. Found in faq header.
+msgid "What is the use of \"inline and defer CSS\"?"
+msgstr ""
+
+#. Found in faq header.
+msgid "But how can one find out what the \"above the fold CSS\" is?"
+msgstr ""
+
+#. Found in faq header.
+msgid "Or should you inline all CSS?"
+msgstr ""
+
+#. Found in faq header.
+msgid "My cache is getting huge, doesn't Autoptimize purge the cache?"
+msgstr ""
+
+#. Found in faq header.
+msgid "Why is \"look only in head\" marked as deprecated"
+msgstr ""
+
+#. Found in faq header.
+msgid "What can I do with the API?"
+msgstr ""
+
+#. Found in faq header.
+msgid "How can I use/ activate autoptimize_helper.php_example?"
+msgstr ""
+
+#. Found in faq header.
+msgid "How does CDN work?"
+msgstr ""
+
+#. Found in faq header.
+msgid "How can I force the aggregated files to be static CSS or JS instead of PHP?"
+msgstr ""
+
+#. Found in faq header.
+msgid "How does \"exclude from optimizing\" work?"
+msgstr ""
+
+#. Found in faq header.
+msgid "Configuring &amp; Troubleshooting Autoptimize"
+msgstr ""
+
+#. Found in faq header.
+msgid "Help, I have a blank page or an internal server error after enabling Autoptimize!!"
+msgstr ""
+
+#. Found in faq header.
+msgid "I use NextGen Galleries and a lot of JS is not aggregated/ minified?"
+msgstr ""
+
+#. Found in faq header.
+msgid "What is noptimize?"
+msgstr ""
+
+#. Found in faq header.
+msgid "Can I change the directory &amp; filename of cached autoptimize files?"
+msgstr ""
+
+#. Found in faq header.
+msgid "Where can I report an error?"
+msgstr ""
+
+#. Found in faq header.
+msgid "What information should I include when requesting support"
+msgstr ""
+
+#. Found in faq header.
+msgid "I want out, how should I remove Autoptimize?"
+msgstr ""
+
+#. Found in faq header.
+msgid "How can I help/ contribute?"
+msgstr ""
+
+#. Found in faq list item.
+msgid "ticking the \"look only in head\" option for JS and/or CSS."
+msgstr ""
+
+#. Found in faq list item.
+msgid "excluding JS-variables (or sometimes CSS-selectors) that change on a per page (or per pageload) basis. You can read how you can do that <a href=\"http://blog.futtta.be/2014/03/19/how-to-keep-autoptimizes-cache-size-under-control-and-improve-visitor-experience/\">in this blogpost</a>."
+msgstr ""
+
+#. Found in faq list item.
+msgid "using the API to force AO not to aggregate inline JS (this will become an option in the next AO-version), adding e.g. this code to your (child) theme's functions.php:"
+msgstr ""
+
+#. Found in faq list item.
+msgid "if you want to exclude a specific file, e.g. wp-content/plugins/funkyplugin/css/style.css, you could simply exclude \"funkyplugin/css/style.css\""
+msgstr ""
+
+#. Found in faq list item.
+msgid "if you want to exclude all files of a specific plugin, e.g. wp-content/plugins/funkyplugin/js/*, you can exclude for example \"funkyplugin/js/\" or \"plugins/funkyplugin\""
+msgstr ""
+
+#. Found in faq list item.
+msgid "if you want to exclude inline code, you'll have to find a specific, unique string in that block of code and add that to the exclusion list. Example: to exclude \"funky_data='Won\\'t you take me to, Funky Town'\", the identifier is \"funky_data\"."
+msgstr ""
+
+#. Found in faq list item.
+msgid "If all works but you notice your blog is slower, ensure you have a page caching plugin installed (WP Super Cache or similar)."
+msgstr ""
+
+#. Found in faq list item.
+msgid "In case your blog looks weird, i.e. when the layout gets messed up, there is problem with CSS optimization. In this case you can turn on the option \"Look for styles on just head?\" and see if that solves the problem. You can also force CSS not to be aggregated by wrapping it in noptimize-tags in your theme or widget or by adding filename (for external stylesheets) or string (for inline styles) to the exclude-list."
+msgstr ""
+
+#. Found in faq list item.
+msgid "In case some functionality on your site stops working (a carroussel, a menu, the search input, ...) you're likely hitting JavaScript optimization trouble. Enable the option \"Look for scripts only in head?\" and/or \"Force JavaScript in ?\" and/or \"<a href=\"http://blog.futtta.be/2014/08/18/when-should-you-trycatch-javascript/\">Add try/catch wrapping</a>\" and try again. Alternatively -for the technically savvy- you can exclude specific scripts from being treated (moved and/ or aggregated) by Autoptimize by adding a string that will match the offending Javascript or excluding it from within your template files or widgets by wrapping the code between noptimize-tags. Identifying the offending JavaScript and choosing the correct exclusion-string can be trial and error, but in the majority of cases JavaScript optimization issues can be solved this way."
+msgstr ""
+
+#. Found in faq list item.
+msgid "If your theme uses jQuery, you can try either forcing all in head or excluding jquery(-min).js (and jQuery-plugins if needed)."
+msgstr ""
+
+#. Found in faq list item.
+msgid "If you can't get either CSS or JS optimization working, you can off course always continue using the other two optimization-techniques."
+msgstr ""
+
+#. Found in faq list item.
+msgid "If you tried the troubleshooting tips above and you still can't get CSS and JS working at all, you can ask for support on the <a href=\"http://wordpress.org/support/plugin/autoptimize\">WordPress Autoptimize support forum</a>. See below for a description of what information you should provide in your \"trouble ticket\""
+msgstr ""
+
+#. Found in faq list item.
+msgid "A description of the problem, including screenshots and information from your browser's Error/ debug console"
+msgstr ""
+
+#. Found in faq list item.
+msgid "URL of your blog (you can turn Autoptimize off, but should be willing to turn it briefly on to have the error visible)"
+msgstr ""
+
+#. Found in faq list item.
+msgid "your Autoptimize settings (including a description of changes you made to the configuration to try to troubleshoot yourself)"
+msgstr ""
+
+#. Found in faq list item.
+msgid "the Theme used (including the Theme's download link)"
+msgstr ""
+
+#. Found in faq list item.
+msgid "optionally plugins used (if you suspect one or more plugins are raising havoc)"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Disable the plugin (this will remove options and cache)"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Remove the plugin"
+msgstr ""
+
+#. Found in faq list item.
+msgid "Clear any cache that might still have pages which reference Autoptimized CSS/JS (e.g. of a page caching plugin such as WP Super Cache)"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "It concatenates all scripts and styles, minifies and compresses them, adds expires headers, caches them, and moves styles to the page head, and scripts to the footer. It also minifies the HTML code itself, making your page really lightweight."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Although Autoptimize comes without any warranties, it will in general work flawlessly if you configure it correctly. See \"Troubleshooting\" below for info on how to configure in case of problems."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "CSS in general should go in the head of the document. Recently a.o. Google started promoting deferring non-essential CSS, while inlining those styles needed to build the page above the fold. This is especially important to render pages as quickly as possible on mobile devices. As from Autoptimize 1.9.0 this is easy; select \"inline and defer CSS\", paste the block of \"above the fold CSS\" in the input field (text area) and you're good to go!"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "There's no easy solution for that as \"above the fold\" depends on where the fold is, which in turn depends on screensize. There are some tools available however, which try to identify just what is \"above the fold\". <a href=\"https://github.com/addyosmani/above-the-fold-css-tools\">This list of tools</a> is a great starting point and esp. <a href=\"http://jonassebastianohlsson.com/criticalpathcssgenerator/\">http://jonassebastianohlsson.com/criticalpathcssgenerator/</a> is an easy solution if you're not into node.js yourself."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "The short answer: if you just want to improve your (mobile) pagespeed score; yes, otherwise maybe not."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Back in the days CSS optimization was easy; put all CSS in your head, aggregating everything in one CSS-file per media-type and you were good to go. But ever since Google included mobile in PageSpeed Insights and started complaining about redering blocking CSS, things got messy (see \"deferring CSS\" elsewhere in this FAQ). One of the solutions is inlining all your CSS, which as of Autoptimize 1.8.0 is supported."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Inlining all CSS has one clear advantage (better PageSpeed score) and one big disadvantage; your base HTML-page gets significantly bigger. The fact that the HTML gets heavier as such is not a huge issue; when looking at performance for a single page request/ response, performance will be better, as there's no overhead of one or more extra requests for CSS-files. But when looking at a test that includes multiple requests (let's say 5), performance will be worse, as the CSS-payload is sent over whereas normally the seperate CSS-files would not need to be sent any more as they would be in cache."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "So the choice should be based on your answer to some site-specific questions; what is your site's bounce rate? How many pages per visit do your visitors request? If you have a high bounce rate and a low number of average pages per visit, inlining CSS looks like a good idea. But with a high number of pages/ visit, it's probably not a good idea. Except if all you care about is a stellar PageSpeed-score, off course."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "You can find more information on this topic <a href=\"http://blog.futtta.be/2014/02/13/should-you-inline-or-defer-blocking-css/\">in this blog post</a>."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Autoptimize does not have its proper cache purging mechanism, as this could remove optimized CSS/JS which is still referred to in other caches, which would break your site."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "You can however keep the cache size at an acceptable level by either:"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "There's also a filter to stop inline CSS from being aggregated (\"autoptimize_css_include_inline\"), see example-code in autoptimize_helper.php_example if the amount of autoptimized CSS-files would become to high."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "While \"look only in head\" still works, it will in the next major version be replaced by an option to choose if inline JS/ CSS should be autoptimized (which is much more useful). So this is just a small heads up, really."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "A whole lot; there are filters you can use to conditionally disable Autoptimize per request, to change the CSS- and JS-excludes, to change the limit for CSS background-images to be inlined in the CSS, to define what JS-files are moved behing the aggregated on, to change the defer-attribute on the aggregated JS script-tag, ... There are examples for many filters in autoptimize_helper.php_example."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Copy it to /wp-content/plugins/autoptimize_helper.php and activate it in WordPress' plugin page. After that you can simple remove the one of the comment-sequences (double-slash) to activate one (or more) of the functions in there."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Starting from version 1.7.0, CDN is activated upon entering the CDN blog root directory (e.g. http://cdn.example.net/wordpress/). If that URL is present, it will used for all Autoptimize-generated files (i.e. aggregated CSS and JS), including background-images in the CSS (when not using data-uri's)."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "If you want your uploaded images to be on the CDN as well, you can change the upload_url_path in your WordPress configuration (/wp-admin/options.php) to the target CDN upload directory (e.g. http://cdn.example.net/wordpress/wp-content/uploads/). Do take into consideration this only works for images uploaded from that point onwards, not for images that already were uploaded. Thanks to <a href=\"http://wordpress.org/support/topic/please-don%c2%b4t-remove-cdn?replies=15#post-4720048\">BeautyPirate for the tip</a>!"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "If your webserver is properly configured to handle compression (gzip or deflate) and cache expiry (expires and cache-control with sufficient cacheability), you don't need Autoptimize to handle that for you. In that case you can check the \"Save aggregated script/css as static files?\"-option, which will force Autoptimize to save the aggregated files as .css and .js-files (meaning no PHP is needed to serve these files). This setting is default as of Autoptimize 1.8."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Both CSS and JS optimization can skip code from being aggregated and minimized by adding \"identifiers\" to the comma-seperated exclusion list. The exact identifier string to use can be determined this way:"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "After having installed and activated the plugin, you'll have access to an admin page where you can to enable HTML, CSS and JavaScript optimization. According to your liking, you can start of just enabling all of them, or if you're more cautious one at a time."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "If your blog doesn't function normally after having turned on Autoptimize, here are some pointers to identify &amp; solve such issues using \"advanced settings\":"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "First of all make sure you're not running other HTML, CSS or JS minification plugins simultaneously with Autoptimize."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "In some rare cases the <a href=\"https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port/\">CSS minification component</a> currently used by Autoptimize crashes due to a lack of resources (see <a href=\"http://blog.futtta.be/2014/01/14/irregular-expressions-have-your-stack-for-lunch/\">detailed technical explanation here</a>). You can in that case either disable CSS optimization, try to exclude specific CSS from being aggregated or activate the legacy minifiers which don't have that problem. The latter can be accomplished by adding this to your wp-config.php:"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "The \"legacy minifiers\" will remain in Autoptimize \"for ever\" and changes to wp-config.php are not affected by core-, theme- or plugin-upgrades so you should be good to go."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "NextGen Galleries does some nifty stuff to add JavaScript. In order for Autoptimize to be able to aggregate that, you'll need to tell it to initialize earlier, by adding this to your wp-config.php:"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Starting with version 1.6.6 Autoptimize excludes everything inside noptimize tags, e.g.:"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "You can do this in your page/ post content, in widgets and in your theme files (consider creating <a href=\"http://codex.wordpress.org/Child_Themes\">a child theme</a> to avoid your work being overwritten by theme updates)."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Yes, if you want to serve files from e.g. /wp-content/resources/aggregated_12345.css instead of the default /wp-content/cache/autoptimize/autoptimize_12345.css, then add this to wp-config.php:"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "If you changed your wp-content-folder as per <a href=\"http://codex.wordpress.org/Editing_wp-config.php#Moving_wp-content_folder\">the WordPress guidelines</a>, you can tell Autoptimize about that with;"
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "You can report problems on the <a href=\"http://wordpress.org/support/plugin/autoptimize\">wordpress.org support forum</a>, or <a href=\"http://blog.futtta.be/contact/\">contact the maintainer using this contact form</a>."
+msgstr ""
+
+#. Found in faq paragraph.
+msgid "Just <a href=\"https://github.com/futtta/autoptimize\">fork Autoptimize on Github</a> and code away!"
+msgstr ""
